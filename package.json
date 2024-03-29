@@ -21,10 +21,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build:lib": "LIB_NAME=lib vite build",
-    "build:theme": "LIB_NAME=theme vite build",
-    "build:all": "npm run build:theme && npm run build:lib && npm run build:theme && node move-files.js",
-    "build": "tsc && npm run build:all",
+    "build": "tsc && vite build --debug",
     "types:check": "tsc --skipLibCheck --noEmit",
     "watch": "LIB_NAME=theme vite build --watch --mode dev",
     "preview": "vite preview",
@@ -51,7 +48,6 @@
     "prettier": "^2.8.1",
     "typescript": "^4.6.4",
     "vite": "^5.2.7",
-    "vite-plugin-dts": "^1.6.4",
     "vite-tsconfig-paths": "^3.5.1"
   }
 }
